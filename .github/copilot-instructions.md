@@ -264,6 +264,29 @@ Use [PR description standards](.github/instructions/pull-request.instructions.md
 
 ---
 
+### WSL Terminal Output Instructions
+
+When working with WSL (Windows Subsystem for Linux), always carefully read and acknowledge ALL terminal output, including:
+
+- Success messages (like "SUCCESS: X11 GUI test completed")
+- Error messages and stack traces
+- Status indicators and confirmation text
+- Multi-line command continuations (lines starting with `>`)
+
+**Key behaviors:**
+1. **Read the complete output** - Don't assume silence means failure
+2. **Acknowledge what you see** - Quote the actual output text in your response
+3. **Check exit codes** - Use `echo $?` after commands to verify success (0 = success)
+4. **Wait for completion** - Let long-running commands finish before concluding
+
+**Example response format:**
+"I can see the command executed successfully. The output shows: `SUCCESS: X11 GUI test completed`, which confirms the test passed."
+
+**Common WSL pitfalls to avoid:**
+- Assuming no visible output means failure
+- Missing success messages in multi-line outputs
+- Not recognizing when GUI applications run headlessly but successfully
+
 ## Error Handling and Recovery
 
 ### Implementation Failure Protocol

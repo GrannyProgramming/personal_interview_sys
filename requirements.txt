@@ -1,0 +1,48 @@
+# Mnemosyne Interview Preparation System Dependencies
+# Updated: June 13, 2025 - SUCCESSFULLY INSTALLED ✅
+# Python 3.9+ required, WSL Ubuntu environment
+
+# Core Mnemosyne application - INSTALLED ✅
+mnemosyne==0.1.0  # Successfully installed via pip --user
+
+# GUI Framework and Tools - INSTALLED ✅
+PyQt6==6.9.1
+PyQt6-Qt6==6.9.1  # Qt runtime
+PyQt6-sip==13.10.2
+
+# Scientific Computing and Data Analysis - INSTALLED ✅
+pandas==2.3.0
+numpy==2.0.2
+matplotlib==3.9.4
+# seaborn>=0.12.0  # Not yet installed
+
+# Jupyter Development Environment - INSTALLED ✅
+jupyter==1.1.1
+jupyterlab==4.4.3
+ipython==8.18.1
+ipykernel==6.29.5
+notebook==7.4.3
+
+# Database and Storage - INSTALLED ✅
+sqlite-utils==3.38  # CLI tool for SQLite
+sqlite-fts4==1.0.3  # Full-text search support
+# sqlalchemy>=2.0.0  # Not yet needed
+
+# Supporting Libraries - INSTALLED ✅
+click==8.1.8
+pillow==11.2.1
+requests==2.32.4
+PyYAML==6.0.2
+tabulate==0.9.0
+
+# LaTeX Support for Mathematical Notation
+# Note: Requires system LaTeX installation (texlive) - NOT YET INSTALLED
+
+# Development and Testing Tools - TO BE INSTALLED
+# pytest>=7.0.0
+# black>=23.0.0
+# flake8>=6.0.0
+
+# System Integration - TO BE INSTALLED
+# psutil>=5.9.0  # System monitoring
+# schedule>=1.2.0  # Task scheduling for backups

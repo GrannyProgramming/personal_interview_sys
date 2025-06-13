@@ -9,6 +9,21 @@ A comprehensive flashcard-based learning system using Mnemosyne for mastering te
 **Environment**: Python virtual environment in Windows WSL2  
 **Learning Method**: Spaced repetition using Mnemosyne flashcards
 
+## 📁 Project Structure
+
+This project follows a structured organization for maintainability and scalability:
+
+- **`src/`** - Source code packages (core, content, database, gui)
+- **`content/`** - Interview stage content organized by topic
+- **`config/`** - Configuration files and settings
+- **`data/`** - Databases and backups
+- **`docs/`** - Documentation, planning, and guides
+- **`tests/`** - Test suites and fixtures
+- **`scripts/`** - Utility and automation scripts
+- **`media/`** - Images, diagrams, and visual assets
+
+See [`docs/guides/DIRECTORY_STRUCTURE.md`](docs/guides/DIRECTORY_STRUCTURE.md) for complete details.
+
 ## 🚀 Quick Start
 
 ### Prerequisites
