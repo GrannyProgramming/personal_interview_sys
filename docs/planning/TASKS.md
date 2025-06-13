@@ -113,7 +113,7 @@ Transform the comprehensive planning document into a functional Mnemosyne-based 
 **Timeline**: Day 1-2 (3-4 hours)  
 **Dependencies**: Working Mnemosyne installation
 
-- [ ] **2.1 Design Hierarchical Tag System**
+- [x] **2.1 Design Hierarchical Tag System** ✅
   - **Acceptance Criteria**: Three-tier tag structure implemented (Stage → Topic → Complexity), tag naming conventions documented
   - **Tag Categories**:
     - Stage 1: `S1_DataManipulation`, `S1_Pandas`, `S1_SQL`, `S1_Processing`
@@ -156,65 +156,11 @@ Transform the comprehensive planning document into a functional Mnemosyne-based 
   - **Files**: `content/creation_guidelines.md`, `content/quality_checklist.md`
   - **Validation**: Guidelines enable consistent, high-quality content creation
 
-### 3. Core Content Development
-**Timeline**: Day 2-5 (8-12 hours)  
+### 3. Study System Foundation
+**Timeline**: Day 2-3 (4-6 hours)  
 **Dependencies**: Content framework established
 
-- [ ] **3.1 Stage 1: Data Manipulation Content (60+ cards)**
-  - **Acceptance Criteria**: Comprehensive coverage of pandas operations, SQL queries, data processing patterns
-  - **Content Areas**:
-    - Pandas fundamentals: DataFrame operations, indexing, groupby, merge/join
-    - SQL mastery: Complex queries, window functions, optimization, performance
-    - Data processing: ETL patterns, data validation, error handling, performance
-    - Python libraries: NumPy integration, data visualization, statistical analysis
-  - **Files**: Cards tagged with `S1_*` categories, code examples tested and verified
-  - **Validation**: 60+ cards created, code examples execute correctly, covers interview requirements
-
-- [ ] **3.2 Stage 2: Culture Fit Content (40+ cards)**
-  - **Acceptance Criteria**: Behavioral scenarios mapped to Skyscanner values, STAR method examples
-  - **Content Areas**:
-    - Skyscanner values alignment: Innovation, collaboration, customer focus
-    - Leadership scenarios: Team conflict resolution, project management, mentoring
-    - Problem-solving examples: Technical challenges, process improvements, innovation
-    - Communication skills: Cross-team collaboration, stakeholder management, presentation
-  - **Files**: Cards tagged with `S2_*` categories, STAR format scenarios
-  - **Validation**: 40+ behavioral cards, scenarios relevant to senior engineer role
-
-- [ ] **3.3 Stage 3: MLOps Engineering Content (50+ cards)**
-  - **Acceptance Criteria**: ML pipeline design, monitoring strategies, infrastructure concepts
-  - **Content Areas**:
-    - Pipeline architecture: Data ingestion, model training, deployment, monitoring
-    - Infrastructure: Containerization, orchestration, scaling, cloud services
-    - Monitoring & observability: Model performance, data drift, system health
-    - DevOps practices: CI/CD for ML, testing strategies, version control, rollback
-  - **Files**: Cards tagged with `S3_*` categories, architecture diagrams, configuration examples
-  - **Validation**: 50+ MLOps cards, technical depth appropriate for senior role
-
-- [ ] **3.4 Stage 4: Work History Reflection (30+ cards)**
-  - **Acceptance Criteria**: Personal achievement cards, technical contribution examples, growth narratives
-  - **Content Areas**:
-    - Technical achievements: Complex projects, innovation, problem-solving impact
-    - Leadership examples: Team guidance, process improvement, knowledge sharing
-    - Growth stories: Learning from failures, skill development, career progression
-    - Impact metrics: Quantifiable results, business value, technical excellence
-  - **Files**: Cards tagged with `S4_*` categories, achievement documentation
-  - **Validation**: 30+ reflection cards, compelling narratives with measurable impact
-
-- [ ] **3.5 Cross-Cutting Technical Concepts**
-  - **Acceptance Criteria**: Fundamental concepts applicable across all stages, system design principles
-  - **Content Areas**:
-    - Distributed systems: Consistency, availability, partition tolerance, scalability
-    - Software architecture: Design patterns, microservices, API design, performance
-    - Data structures & algorithms: Complexity analysis, optimization, trade-offs
-    - System design: Load balancing, caching, database design, monitoring
-  - **Files**: Cards with cross-stage tags, technical diagrams, complexity analysis
-  - **Validation**: Concepts support multiple interview stages, appropriate technical depth
-
-### 4. Study System Optimization
-**Timeline**: Day 5-7 (4-6 hours)  
-**Dependencies**: Core content library established
-
-- [ ] **4.1 Configure Spaced Repetition Settings**
+- [ ] **3.1 Configure Spaced Repetition Settings**
   - **Acceptance Criteria**: SM-2 algorithm parameters optimized for interview timeline, difficulty progression calibrated
   - **Configuration**:
     - Initial interval: 1 day for new cards
@@ -224,7 +170,7 @@ Transform the comprehensive planning document into a functional Mnemosyne-based 
   - **Files**: Mnemosyne configuration file, algorithm parameter documentation
   - **Validation**: Review schedule aligns with interview timeline, difficult concepts receive more attention
 
-- [ ] **4.2 Create Study Session Templates**
+- [ ] **3.2 Create Study Session Templates**
   - **Acceptance Criteria**: Predefined study sessions for different focus areas, time-boxed session types
   - **Session Types**:
     - Daily Review (30 min): Mixed content from all stages
@@ -234,7 +180,84 @@ Transform the comprehensive planning document into a functional Mnemosyne-based 
   - **Files**: Session configuration templates, study schedule recommendations
   - **Validation**: Sessions provide focused, efficient study experiences
 
-- [ ] **4.3 Implement Progress Tracking**
+- [ ] **3.3 Configure Database and Backup System**
+  - **Acceptance Criteria**: SQLite database with proper schema, automated daily backups, backup verification process
+  - **Setup**: Database location, backup directory structure, cron job for automated backup
+  - **Commands**:
+    ```bash
+    mkdir -p ~/interview_prep_backup
+    crontab -e  # Add daily backup job
+    ```
+  - **Files**: `~/interview_prep_backup/` directory, backup scripts, cron configuration
+  - **Dependencies**: Functional Mnemosyne installation
+  - **Validation**: Backup creates complete database export, restoration process tested
+
+- [ ] **3.4 Performance Optimization**
+  - **Acceptance Criteria**: Application response time < 2 seconds, database queries < 500ms, smooth GUI operation
+  - **Optimization Areas**:
+    - Database indexing for search operations
+    - Image compression for faster loading
+    - Memory management for large card sets
+    - Startup time reduction
+  - **Files**: Performance monitoring scripts, optimization configuration
+  - **Validation**: System remains responsive with 180+ cards, no performance degradation
+
+### 4. Core Content Development (DEFERRED)
+**Timeline**: To be scheduled later  
+**Dependencies**: Study system foundation complete
+**Note**: Content creation moved to later phase to focus on system framework first
+
+- [ ] **4.1 Stage 1: Data Manipulation Content (60+ cards)** - DEFERRED
+  - **Acceptance Criteria**: Comprehensive coverage of pandas operations, SQL queries, data processing patterns
+  - **Content Areas**:
+    - Pandas fundamentals: DataFrame operations, indexing, groupby, merge/join
+    - SQL mastery: Complex queries, window functions, optimization, performance
+    - Data processing: ETL patterns, data validation, error handling, performance
+    - Python libraries: NumPy integration, data visualization, statistical analysis
+  - **Files**: Cards tagged with `S1_*` categories, code examples tested and verified
+  - **Validation**: 60+ cards created, code examples execute correctly, covers interview requirements
+
+- [ ] **4.2 Stage 2: Culture Fit Content (40+ cards)** - DEFERRED
+  - **Acceptance Criteria**: Behavioral scenarios mapped to Skyscanner values, STAR method examples
+  - **Content Areas**:
+    - Skyscanner values alignment: Innovation, collaboration, customer focus
+    - Leadership scenarios: Team conflict resolution, project management, mentoring
+    - Problem-solving examples: Technical challenges, process improvements, innovation
+    - Communication skills: Cross-team collaboration, stakeholder management, presentation
+  - **Files**: Cards tagged with `S2_*` categories, STAR format scenarios
+  - **Validation**: 40+ behavioral cards, scenarios relevant to senior engineer role
+
+- [ ] **4.3 Stage 3: System Design for ML Platforms Content (50+ cards)** - DEFERRED
+  - **Acceptance Criteria**: Distributed ML system design, platform architecture, scalability patterns
+  - **Content Areas**:
+    - System Architecture: Distributed ML systems, microservices, service mesh, API design
+    - Scalability & Performance: Horizontal scaling, load balancing, auto-scaling, optimization
+    - Data Platform Design: Data lake architecture, streaming systems, batch processing, data mesh
+    - ML Platform Infrastructure: Model serving, A/B testing platforms, feature stores, monitoring
+  - **Files**: Cards tagged with `S3_*` categories, system architecture diagrams, design patterns
+  - **Validation**: 50+ system design cards, technical depth appropriate for senior distributed systems role
+
+- [ ] **4.4 Stage 4: Work History Reflection (30+ cards)** - DEFERRED
+  - **Acceptance Criteria**: Personal achievement cards, technical contribution examples, growth narratives
+  - **Content Areas**:
+    - Technical achievements: Complex projects, innovation, problem-solving impact
+    - Leadership examples: Team guidance, process improvement, knowledge sharing
+    - Growth stories: Learning from failures, skill development, career progression
+    - Impact metrics: Quantifiable results, business value, technical excellence
+  - **Files**: Cards tagged with `S4_*` categories, achievement documentation
+  - **Validation**: 30+ reflection cards, compelling narratives with measurable impact
+
+- [ ] **4.5 Cross-Cutting Technical Concepts** - DEFERRED
+  - **Acceptance Criteria**: Fundamental concepts applicable across all stages, system design principles
+  - **Content Areas**:
+    - Distributed systems: Consistency, availability, partition tolerance, scalability
+    - Software architecture: Design patterns, microservices, API design, performance
+    - Data structures & algorithms: Complexity analysis, optimization, trade-offs
+    - System design: Load balancing, caching, database design, monitoring
+  - **Files**: Cards with cross-stage tags, technical diagrams, complexity analysis
+  - **Validation**: Concepts support multiple interview stages, appropriate technical depth
+
+- [ ] **4.1 Implement Progress Tracking**
   - **Acceptance Criteria**: Progress metrics dashboard, retention rate monitoring, weak area identification
   - **Metrics Tracked**:
     - Daily cards reviewed and retention rates
@@ -244,16 +267,6 @@ Transform the comprehensive planning document into a functional Mnemosyne-based 
   - **Files**: Progress tracking scripts, visualization dashboards
   - **Dependencies**: Established study routine with sufficient data
   - **Validation**: Metrics provide actionable insights for study optimization
-
-- [ ] **4.4 Performance Optimization**
-  - **Acceptance Criteria**: Application response time < 2 seconds, database queries < 500ms, smooth GUI operation
-  - **Optimization Areas**:
-    - Database indexing for search operations
-    - Image compression for faster loading
-    - Memory management for large card sets
-    - Startup time reduction
-  - **Files**: Performance monitoring scripts, optimization configuration
-  - **Validation**: System remains responsive with 180+ cards, no performance degradation
 
 ### 5. Testing & Validation Strategy
 **Timeline**: Day 6-7 (2-3 hours)  
@@ -477,3 +490,10 @@ Transform the comprehensive planning document into a functional Mnemosyne-based 
 - `requirements.txt` (new): Comprehensive dependency list for reproducible setup
 - `/home/alex/.bashrc` (modified): Added DISPLAY environment variable for persistent X11 forwarding
 - `x11_validation.py` (new): Comprehensive X11 GUI validation script with test results
+
+### File Cleanup & Organization
+- `data/interview_prep_test.db` (removed): Duplicate database file eliminated, keeping only `data/databases/interview_prep_test.db`
+- `docs/archive/` (renamed from `docs/generic/`): Legacy documentation properly archived
+- `docs/guides/DIRECTORY_STRUCTURE.md` (updated): Directory references updated to reflect archive folder rename
+- `content/tag_structure.md` (verified): Hierarchical tag architecture definition - distinct from tagging guidelines
+- `content/tagging_guidelines.md` (verified): Content creation usage instructions - complementary to tag structure
