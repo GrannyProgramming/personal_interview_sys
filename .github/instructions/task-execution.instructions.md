@@ -22,17 +22,19 @@ applyTo: "**/docs/TASKS.md,**/TASKS.md"
 
 ### Task Authority Hierarchy (Trust But Verify)
 ```
-1. TASKS.md               # Implementation roadmap authority
-2. User explicit approval # Permission gate for next sub-task  
-3. Technical validation   # Functional verification authority
-4. Documentation updates  # Progress tracking authority
+1. docs/planning/TASKS.md        # Implementation roadmap authority
+2. User explicit approval        # Permission gate for next sub-task  
+3. Technical validation          # Functional verification authority
+4. Documentation updates         # Progress tracking authority
+5. docs/guides/DIRECTORY_STRUCTURE.md # Directory organization authority
 ```
 
 ### Never Rules (Hard Never - Sparingly Used)
 - **NEVER** mark a sub-task `[x]` without user approval and functional validation
 - **NEVER** proceed to next sub-task without explicit user permission ("yes", "y", "continue")
-- **NEVER** modify TASKS.md without updating "Relevant Files" section
+- **NEVER** modify docs/planning/TASKS.md without updating "Relevant Files" section
 - **NEVER** skip acceptance criteria validation for any sub-task
+- **NEVER** create files outside the established directory structure without justification
 
 ---
 
@@ -120,11 +122,23 @@ applyTo: "**/docs/TASKS.md,**/TASKS.md"
 #### File Tracking Standards
 ```markdown
 ## Relevant Files
-- `/home/user/.venv/interview_prep_env/` (new): Python virtual environment with interview dependencies
-- `/home/user/.bashrc` (modified): Added DISPLAY variable and venv activation
-- `requirements.txt` (new): Locked dependency versions for reproducible setup
-- `setup_validation.py` (new): Environment verification script
+- `src/core/config.py` (new): Application configuration management
+- `src/database/db_utility.py` (modified): Database utility functions
+- `config/app_config.yaml` (new): Application configuration file
+- `data/databases/interview_prep_main.db` (new): Main production database
+- `content/stage1_data_manipulation/pandas_operations.md` (new): pandas flashcard content
+- `scripts/setup_environment.py` (new): Environment setup automation
+- `tests/test_spaced_repetition.py` (new): Spaced repetition algorithm tests
 ```
+
+**Directory Path Guidelines:**
+- **Source Code**: Use `src/` prefix for all Python modules and packages
+- **Content**: Use `content/stage[N]_[name]/` for interview stage content
+- **Configuration**: Use `config/` for all configuration files
+- **Data**: Use `data/databases/` for databases, `data/backups/` for backups
+- **Documentation**: Use `docs/guides/` for user guides, `docs/planning/` for project docs
+- **Scripts**: Use `scripts/` for utility and automation scripts
+- **Tests**: Use `tests/` for all test files and fixtures
 
 ---
 
@@ -182,11 +196,71 @@ applyTo: "**/docs/TASKS.md,**/TASKS.md"
 
 ## 🔧 Implementation Standards
 
+### Directory Structure Compliance
+
+All task implementations must follow the established directory structure as defined in `docs/guides/DIRECTORY_STRUCTURE.md`. 
+
+**File Placement Guidelines:**
+- **Python Source Code**: All `.py` files go in `src/` with appropriate package structure
+- **Configuration Files**: Use `config/` for YAML, JSON, and other config files
+- **Database Files**: Production databases in `data/databases/`, backups in `data/backups/`
+- **Content Files**: Interview content in `content/stage[N]_[name]/` directories
+- **Test Files**: All test files in `tests/` with appropriate naming conventions
+- **Documentation**: User guides in `docs/guides/`, planning docs in `docs/planning/`
+- **Scripts**: Utility scripts in `scripts/`, maintenance scripts in `scripts/maintenance/`
+- **Media Assets**: Images and diagrams in `media/` with appropriate subdirectories
+
+**Import Path Standards:**
+```python
+# Correct import paths following new structure
+from src.core.config import ApplicationConfig
+from src.database.db_utility import DatabaseManager
+from src.content.content_processor import ContentProcessor
+
+# Update any legacy imports when moving files
+# Old: from db_utility import DatabaseManager
+# New: from src.database.db_utility import DatabaseManager
+```
+
+**File Creation Protocol:**
+1. Determine appropriate directory based on file purpose
+2. Create file in correct location following naming conventions  
+3. Update any import statements to use new paths
+4. Add file to "Relevant Files" section with descriptive purpose
+5. Validate that file location aligns with project architecture
+
+### WSL Terminal Output Instructions
+
+When working with WSL (Windows Subsystem for Linux), always carefully read and acknowledge ALL terminal output, including:
+
+- Success messages (like "SUCCESS: X11 GUI test completed")
+- Error messages and stack traces
+- Status indicators and confirmation text
+- Multi-line command continuations (lines starting with `>`)
+
+**Key behaviors:**
+1. **Read the complete output** - Don't assume silence means failure
+2. **Acknowledge what you see** - Quote the actual output text in your response
+3. **Check exit codes** - Use `echo $?` after commands to verify success (0 = success)
+4. **Wait for completion** - Let long-running commands finish before concluding
+
+**Example response format:**
+"I can see the command executed successfully. The output shows: `SUCCESS: X11 GUI test completed`, which confirms the test passed."
+
+**Common WSL pitfalls to avoid:**
+- Assuming no visible output means failure
+- Missing success messages in multi-line outputs
+- Not recognizing when GUI applications run headlessly but successfully
+
 ### Tool Priority for Mnemosyne Tasks
 1. **Direct WSL commands**: Native Linux environment operations
-2. **Python virtual environment**: Isolated dependency management
-3. **Mnemosyne CLI/API**: Application-specific operations
-4. **GUI validation**: Visual confirmation of functionality
+2. **Python virtual environment**: Isolated dependency management  
+3. **Source code modules**: Use `src/` package structure for all Python code
+4. **Configuration files**: Use `config/` directory for all settings
+5. **Database operations**: Use `src/database/` modules for data persistence
+6. **Content management**: Use `content/` directory structure for interview materials
+7. **Mnemosyne CLI/API**: Application-specific operations
+8. **GUI validation**: Visual confirmation of functionality
 
 ### Error Handling Protocol
 ```markdown
@@ -225,10 +299,11 @@ applyTo: "**/docs/TASKS.md,**/TASKS.md"
 ```
 
 ### Documentation Maintenance
-- **Real-time Updates**: Modify TASKS.md immediately after each sub-task completion
-- **File Tracking**: Maintain accurate "Relevant Files" section throughout implementation
+- **Real-time Updates**: Modify `docs/planning/TASKS.md` immediately after each sub-task completion
+- **File Tracking**: Maintain accurate "Relevant Files" section using proper directory paths
 - **Progress Preservation**: Ensure all progress is documented for session continuity
 - **Completion Verification**: Double-check parent task completion status after each sub-task
+- **Directory Compliance**: Verify all created files follow `docs/guides/DIRECTORY_STRUCTURE.md` standards
 
 ---
 
@@ -246,8 +321,10 @@ applyTo: "**/docs/TASKS.md,**/TASKS.md"
 - [ ] Required card count achieved (specified in acceptance criteria)
 - [ ] All code examples tested and functional
 - [ ] Proper hierarchical tagging applied (Stage → Topic → Complexity)
+- [ ] Content stored in correct `content/stage[N]_[name]/` directory
 - [ ] Content aligns with interview stage objectives
 - [ ] Quality review completed for accuracy and clarity
+- [ ] Files follow naming conventions from `docs/guides/DIRECTORY_STRUCTURE.md`
 ```
 
 ---
@@ -269,32 +346,54 @@ Effective task execution should demonstrate:
 
 ### Ideal Sub-task Processing Example
 ```markdown
-**Starting Task 1.1: Prepare WSL Python Environment**
+**Starting Task 2.1: Design Hierarchical Tag System**
 
 **Pre-Execution Assessment:**
-- Dependencies: WSL2 environment available ✅
-- Requirements: Python 3.9+, virtual environment, pip update ✅
-- Approach: Use python -m venv, activate, upgrade pip ✅
+- Dependencies: Directory structure established ✅
+- Requirements: Three-tier tag structure, documentation ✅
+- Approach: Create YAML config, implement validation logic ✅
 
 **Implementation:**
 [Execution details with commands and outputs]
 
 **Validation:**
-- Python version: 3.9.16 ✅
-- Virtual environment: Active and isolated ✅  
-- Pip version: 23.1.2 (latest) ✅
-- Environment location: /home/user/.venv/interview_prep_env ✅
+- Tag hierarchy supports Stage → Topic → Complexity ✅
+- Configuration file properly structured ✅  
+- Validation logic handles edge cases ✅
+- Documentation clearly explains usage ✅
 
 **Files Modified:**
-- `/home/user/.venv/interview_prep_env/` (new): Python virtual environment
-- `/home/user/.bashrc` (modified): Added venv activation alias
+- `config/tag_hierarchy.yaml` (new): Hierarchical tag system configuration
+- `src/content/tag_hierarchy.py` (new): Tag validation and management logic
+- `docs/guides/CONTENT_CREATION.md` (new): Tag usage guidelines for content creators
+- `tests/test_tag_hierarchy.py` (new): Comprehensive tag system validation tests
 
 **Completion:**
-Task 1.1 meets all acceptance criteria and is ready for completion marking.
+Task 2.1 meets all acceptance criteria and follows established directory structure.
 
 **Permission Request:**
-Ready to mark Task 1.1 as complete [x] and proceed to Task 1.2: Configure X11 GUI Forwarding. 
+Ready to mark Task 2.1 as complete [x] and proceed to Task 2.2: Create Card Templates. 
 Please confirm with "yes" or "y" to proceed.
+```
+
+### Directory Structure Compliance Example
+```markdown
+**Files Created Following Structure Guidelines:**
+- `src/content/tag_hierarchy.py` ✅ (Source code in appropriate package)
+- `config/tag_hierarchy.yaml` ✅ (Configuration in config directory)
+- `docs/guides/CONTENT_CREATION.md` ✅ (User guide in guides directory)
+- `tests/test_tag_hierarchy.py` ✅ (Tests in tests directory)
+
+**Import Path Updates:**
+```python
+# New structured imports
+from src.content.tag_hierarchy import TagManager
+from config import load_yaml_config
+
+# Updated from legacy paths
+# Old: from tag_utils import TagManager
+# New: from src.content.tag_hierarchy import TagManager
+```
 ```
 
 This comprehensive task execution framework ensures systematic, quality-focused implementation while maintaining user control and educational effectiveness throughout the Mnemosyne interview preparation system development.
