@@ -1,5 +1,10 @@
 # Conventional Commit Instructions
 
+**Version**: 1.0 | **Framework**: Version Control-Focused | **Last Updated**: June 13, 2025  
+**Project Context**: Personal interview preparation system using Mnemosyne flashcards for Skyscanner Senior Software Engineer role
+
+---
+
 Follow conventional commit format for clear, consistent commit messages that enable automated changelog generation and semantic versioning.
 
 ## Conventional Commit Format

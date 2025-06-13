@@ -1,5 +1,10 @@
 # Pull Request Description Instructions
 
+**Version**: 1.0 | **Framework**: Collaboration-Focused | **Last Updated**: June 13, 2025  
+**Project Context**: Personal interview preparation system using Mnemosyne flashcards for Skyscanner Senior Software Engineer role
+
+---
+
 Generate comprehensive, standardized PR descriptions that facilitate effective code review and project tracking.
 
 ## Standard PR Template

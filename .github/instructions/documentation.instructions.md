@@ -36,6 +36,8 @@ applyTo: "**/docs/**,README.md,**/*.md"
 - **NEVER** document outdated Mnemosyne setup procedures without testing
 - **NEVER** mix technical implementation details in educational content files
 
+**Note**: Version headers and project context ARE appropriate for instruction files (`.github/instructions/*.md`) as these are dynamic, evolving system prompts specific to this project.
+
 ---
 
 ## 📚 Educational Content Standards (Scaling Effort)

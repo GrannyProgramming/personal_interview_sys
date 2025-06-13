@@ -1,6 +1,5 @@
 {
     "github.copilot.enable": {
-        "*": true,
         "plaintext": true,
         "markdown": true,
         "scminput": false
@@ -40,12 +39,17 @@
     "github.copilot.chat.codeGeneration.useInstructionFiles": true,
     "github.copilot.chat.codeGeneration.instructions": [
         {
-            "file": ".github/instructions/planning.instructions.md"
+            "file": ".github/instructions/code-generation.instructions.md"
         }
     ],
     "github.copilot.chat.testGeneration.instructions": [
         {
             "file": ".github/instructions/test-generation.instructions.md"
+        }
+    ],
+    "github.copilot.chat.documentationGeneration.instructions": [
+        {
+            "file": ".github/instructions/documentation.instructions.md"
         }
     ],
     "github.copilot.chat.reviewSelection.enabled": true,

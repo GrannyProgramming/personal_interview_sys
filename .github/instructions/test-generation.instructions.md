@@ -4,6 +4,11 @@ applyTo: "**/test_*.py,**/*_test.py,**/tests/**/*.py,**/*test*.py"
 
 # Test Generation Instructions for Mnemosyne Interview Preparation System
 
+**Version**: 1.0 | **Framework**: Testing-Focused | **Last Updated**: June 13, 2025  
+**Project Context**: Personal interview preparation system using Mnemosyne flashcards for Skyscanner Senior Software Engineer role
+
+---
+
 ## Overview
 Generate comprehensive tests for a Python-based interview preparation system using Mnemosyne flashcards. Focus on educational content reliability, cross-platform compatibility, and data integrity.
 
@@ -221,8 +226,8 @@ MAX_MEMORY_USAGE = 100  # MB for 1000 cards
 
 ```yaml
 # Apply to Python files
-applyto: "*.py"
-applyto: "tests/**/*.py"
+applyTo: "*.py"
+applyTo: "tests/**/*.py"
 
 # Exclude from test generation
 exclude: "tests/"

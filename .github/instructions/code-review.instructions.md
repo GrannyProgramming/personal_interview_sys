@@ -4,6 +4,11 @@ applyTo: "**/*.py,**/*.sh,**/*.yml,**/*.yaml,Dockerfile*,**/requirements*.txt"
 
 # Code Review Instructions for Mnemosyne Interview Preparation System
 
+**Version**: 1.0 | **Framework**: Quality-Focused | **Last Updated**: June 13, 2025  
+**Project Context**: Personal interview preparation system using Mnemosyne flashcards for Skyscanner Senior Software Engineer role
+
+---
+
 ## Overview
 You are reviewing code for a personal interview preparation system using Mnemosyne flashcards. Focus on Python best practices, WSL compatibility, and educational content quality.
 
@@ -138,9 +143,9 @@ Use this structure for review comments:
 
 ```yaml
 # Apply to specific file types
-applyto: "*.py"
-applyto: "requirements.txt"
-applyto: "*.md"
+applyTo: "*.py"
+applyTo: "requirements.txt"
+applyTo: "*.md"
 
 # Exclude generated files
 exclude: "*.pyc"
