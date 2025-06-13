@@ -105,7 +105,7 @@ personal_interview_sys/
 │   │   └── STUDY_METHODOLOGY.md  # Spaced repetition study guide
 │   ├── instructions/              # System and AI instructions
 │   │   └── (future instruction files moved from .github/instructions/)
-│   ├── generic/                   # Legacy documentation (preserved)
+│   ├── archive/                   # Archived legacy documentation
 │   └── research/                  # Research and reference materials
 │
 ├── scripts/                       # Utility and automation scripts
