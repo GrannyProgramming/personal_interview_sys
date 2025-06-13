@@ -1,0 +1,96 @@
+{
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    "github.copilot.editor.enableCodeActions": true,
+    "github.copilot.renameSuggestions.triggerAutomatically": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "editor.inlineSuggest.edits.allowCodeShifting": "always",
+    "editor.inlineSuggest.edits.renderSideBySide": "auto",
+    "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+    "github.copilot.chat.followUps": true,
+    "github.copilot.chat.runCommand.enabled": true,
+    "github.copilot.chat.useProjectTemplates": true,
+    "github.copilot.chat.scopeSelection": true,
+    "github.copilot.chat.terminalChatLocation": "chatView",
+    "chat.detectParticipant.enabled": true,
+    "chat.commandCenter.enabled": true,
+    "chat.agent.enabled": true,
+    "chat.agent.maxRequests": 20,
+    "github.copilot.chat.agent.autoFix": true,
+    "github.copilot.chat.agent.runTasks": true,
+    "github.copilot.chat.agent.thinkingTool": true,
+    "github.copilot.chat.newWorkspaceCreation.enabled": true,
+    "github.copilot.chat.edits.temporalContext.enabled": true,
+    "github.copilot.chat.edits.suggestRelatedFilesFromGitHistory": true,
+    "github.copilot.chat.editor.temporalContext.enabled": true,
+    "github.copilot.chat.codesearch.enabled": true,
+    "search.searchView.semanticSearchBehavior": "runOnEmpty",
+    "search.searchView.keywordSuggestions": true,
+    "chat.mcp.enabled": true,
+    "inlineChat.acceptedOrDiscardBeforeSave": true,
+    "inlineChat.finishOnType": false,
+    "inlineChat.holdToSpeech": true,
+    "inlineChat.lineEmptyHint": true,
+    "inlineChat.lineNaturalLanguageHint": true,
+    "inlineChat.accessibleDiffView": "auto",
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+    "github.copilot.chat.codeGeneration.instructions": [
+        {
+            "file": ".github/instructions/planning.instructions.md"
+        }
+    ],
+    "github.copilot.chat.testGeneration.instructions": [
+        {
+            "file": ".github/instructions/test-generation.instructions.md"
+        }
+    ],
+    "github.copilot.chat.reviewSelection.enabled": true,
+    "github.copilot.chat.reviewSelection.instructions": [
+        {
+            "file": ".github/instructions/code-review.instructions.md"
+        }
+    ],
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "file": ".github/instructions/commit-message.instructions.md"
+        }
+    ],
+    "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
+        {
+            "file": ".github/instructions/pull-request.instructions.md"
+        }
+    ],
+    "chat.promptFiles": true,
+    "github.copilot.chat.generateTests.codeLens": true,
+    "github.copilot.chat.setupTests.enabled": true,
+    "github.copilot.chat.startDebugging.enabled": true,
+    "github.copilot.chat.copilotDebugCommand.enabled": true,
+    "notebook.experimental.generate": true,
+    "accessibility.verbosity.inlineChat": true,
+    "accessibility.verbosity.inlineCompletions": true,
+    "accessibility.verbosity.panelChat": true,
+    "accessibility.voice.keywordActivation": "chatInView",
+    "accessibility.voice.autoSynthesize": "on",
+    "accessibility.voice.speechTimeout": 5000,
+    "chat.editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+    "chat.editor.fontSize": 14,
+    "chat.editor.fontWeight": "normal",
+    "chat.editor.lineHeight": 1.4,
+    "chat.editor.wordWrap": "on",
+    "chat.editing.confirmEditRequestRemoval": true,
+    "chat.editing.confirmEditRequestRetry": true,
+    "chat.editing.autoAcceptDelay": 0,
+    "chat.sendElementsToChat.enabled": true,
+    "workbench.commandPalette.experimental.askChatLocation": "quickChat",
+    "workbench.settings.showAISearchToggle": true,
+    "python.defaultInterpreterPath": "/home/alex/miniforge3/envs/interview_prep/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "terminal.integrated.shellArgs.linux": ["-l"],
+    "terminal.integrated.env.linux": {
+        "CONDA_DEFAULT_ENV": "interview_prep"
+    }
+}
